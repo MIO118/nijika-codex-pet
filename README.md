@@ -1,10 +1,12 @@
-# 虹夏 · Nijika Ijichi Codex Pet
+# 虹夏 Codex 桌宠 · Nijika Ijichi Desktop Pet
+
+[![安装自检](https://github.com/MIO118/nijika-codex-pet/actions/workflows/validate.yml/badge.svg)](https://github.com/MIO118/nijika-codex-pet/actions/workflows/validate.yml)
 
 ![虹夏待机动画](assets/idle.gif)
 
 > 本产品为 Amiaね 制作的《孤独摇滚！》虹夏桌宠；仅限非商业使用，原角色权利归原权利人。
 
-这是一只用于 ChatGPT/Codex 桌面版的自定义Codex桌宠宠物。v2 图集包含 9 种工作状态动画与 16 个视线方向，适用于支持桌面 Pets 的 macOS 和 Windows 版本。安装包保存在电脑本地，换账号后仍可保留文件；在新电脑上需要重新安装。它不会自动创建网页 ChatGPT Work 账号中的GPT桌宠宠物。
+虹夏（伊地知虹夏 / Nijika Ijichi）Codex 桌宠，是 Amiaね 制作的《孤独摇滚！》（Bocchi the Rock!）同人桌面宠物。提供 npx 命令与 ZIP 离线安装，用于支持 Pets 的 ChatGPT/Codex 桌面版（Codex桌宠 / GPT桌宠）。v2 图集包含 9 种工作状态动画与 16 个视线方向，适用于支持桌面 Pets 的 macOS 和 Windows 版本。安装包保存在电脑本地，换账号后仍可保留文件；在新电脑上需要重新安装。它不会自动创建网页 ChatGPT Work 账号中的宠物。
 
 ## 预览
 
@@ -78,7 +80,7 @@ pets/
 
 安装后重新打开桌面应用，在 **设置 → Pets** 中刷新并选择「虹夏」。若当前应用或账号未开放桌面 Pets，安装文件仍会保留，但宠物可能暂时不显示。换电脑时，在新电脑上重新运行上面的命令即可。
 
-> 社区投稿已于 2026-10-07 [关闭并撤回](https://github.com/legeling/awesome-codex-pet/pull/251)，未合并；当前未被社区画廊收录。请使用本仓库的 GitHub 命令或 ZIP 安装方法，`@legeling/codex-pet` 的社区目录命令目前不能安装这只虹夏。
+> 社区收录进度见[投稿 #251](https://github.com/legeling/awesome-codex-pet/pull/251)。在投稿被合并并加入社区安装目录之前，请使用本仓库的 GitHub 命令或 ZIP 安装方法。收录后才可使用 `npx --yes @legeling/codex-pet install nijika--amia`。
 
 ## 文件
 
@@ -93,7 +95,7 @@ pets/
 
 Amiaね 以用户提供的角色设计图为参考，借助 AI 制作并校验动画；本仓库没有转载原始参考图。这是同人作品。角色出处、署名及非商业使用范围见 [NOTICE.md](NOTICE.md)。
 
-已知画面限制：在部分相邻视线角度中，转向变化较细微。图集经过结构检查，WebP 与定稿 PNG 的像素一致。
+已知画面限制：在部分相邻视线角度中，转向变化较细微；157.5° 到 180° 的视线过渡略突兀。部分动作行的头身比例有轻微差异，深色背景下可见一些细金色描边。图集经过结构检查，WebP 与定稿 PNG 的像素一致。
 
 ---
 
