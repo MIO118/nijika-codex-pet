@@ -1,0 +1,22 @@
+{
+  "name": "nijika-codex-pet",
+  "version": "1.0.0",
+  "description": "A non-commercial Nijika Ijichi desktop pet package for ChatGPT/Codex",
+  "type": "module",
+  "bin": {
+    "nijika-codex-pet": "./install.mjs"
+  },
+  "files": [
+    "install.mjs",
+    "pet.json",
+    "spritesheet.webp",
+    "NOTICE.md"
+  ],
+  "scripts": {
+    "test": "node scripts/verify.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "SEE LICENSE IN NOTICE.md"
+}
