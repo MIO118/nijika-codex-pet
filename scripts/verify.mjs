@@ -35,3 +35,6 @@ try {
   assert.deepEqual(installed, image);
 } finally {
   rmSync(testHome, { recursive: true, force: true });
+}
+
+console.log('Manifest, v2 WebP, checksum and local install verified.');
