@@ -3,9 +3,10 @@ import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { join, resolve } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const root = resolve(import.meta.dirname, '..');
+const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const manifest = JSON.parse(readFileSync(join(root, 'pet.json'), 'utf8'));
 const image = readFileSync(join(root, 'spritesheet.webp'));
 
@@ -27,13 +28,10 @@ assert.deepEqual([width, height], [1536, 2288]);
 const digest = createHash('sha256').update(image).digest('hex');
 assert.equal(digest, '85e14504b95e92ea77c362174bb1979a8a067f55a67b1915f33721eaa66451f9');
 
-const testHome = mkdtempSync(join(tmpdir(), 'nijika-install-check-'));
+const testHome = mkdtempSync(join(tmpdir(), 'nijika install check-'));
 try {
   execFileSync(process.execPath, [join(root, 'install.mjs'), 'install', 'nijika--amia', '--codex-home', testHome]);
   const installed = readFileSync(join(testHome, 'pets', 'nijika--amia', 'spritesheet.webp'));
   assert.deepEqual(installed, image);
 } finally {
   rmSync(testHome, { recursive: true, force: true });
-}
-
-console.log('Manifest, v2 WebP, checksum and local install verified.');
