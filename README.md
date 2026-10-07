@@ -12,23 +12,33 @@
 
 ## 安装
 
-需要 Node.js 20 或更新版本。仓库发布后，可通过 GitHub 直接运行安装器：
+先安装 [Node.js 20 或更新版本](https://nodejs.org/en/download/)。macOS 打开「终端」，Windows 打开「PowerShell」；输入 `node --version` 和 `npm --version`，确认两条命令都能显示版本号。
+
+**推荐：固定 v1.0.0，只需 Node.js。** 复制下面一整行执行：
+
+```bash
+npx --yes --package https://github.com/MIO118/nijika-codex-pet/archive/refs/tags/v1.0.0.tar.gz nijika-codex-pet install nijika--amia
+```
+
+这条命令从 GitHub 的 v1.0.0 标签下载公开安装包，再把虹夏文件放到当前电脑；已在全新临时目录实际验证。
+
+如果已经安装 Git，也可以使用较短的仓库命令。它读取仓库当前最新版本：
 
 ```bash
 npx --yes --package github:MIO118/nijika-codex-pet nijika-codex-pet install nijika--amia
 ```
 
-也可以下载此仓库，在仓库目录运行：
+也可以下载本仓库 ZIP，解压后在该目录运行：
 
 ```bash
 node install.mjs install nijika--amia
 ```
 
-安装器不联网，只把仓库内的 `pet.json` 和 `spritesheet.webp` 复制到当前用户的 Codex 宠物目录；通过 `npx` 运行时，npm 会先从 GitHub 获取此仓库。默认位置是 `~/.codex/pets/nijika--amia/`，也支持环境变量 `CODEX_HOME` 或 `--codex-home <路径>`。安装器不会覆盖已有的同名目录。
+运行 `npx` 时 npm 需要联网获取公开文件；安装器本身只把 `pet.json` 和 `spritesheet.webp` 复制到本机 Codex 宠物目录，不会上传到其他 ChatGPT 账号。默认位置是 `~/.codex/pets/nijika--amia/`（Windows 为用户目录下的 `.codex\pets\nijika--amia`），也支持环境变量 `CODEX_HOME` 或 `--codex-home <路径>`。安装器不会覆盖已有的同名目录。
 
-安装后，重新打开桌面应用，在 **设置 → Pets** 中刷新并选择「虹夏」。若工作区没有开放桌面 Pets，安装文件仍会保留，但应用可能不显示宠物。
+安装后重新打开桌面应用，在 **设置 → Pets** 中刷新并选择「虹夏」。若当前应用或账号未开放桌面 Pets，安装文件仍会保留，但宠物可能暂时不显示。换电脑时，在新电脑上重新运行上面的命令即可。
 
-> 若你希望使用 `npx --yes @legeling/codex-pet install nijika--amia` 这个社区目录命令，还需要本项目的投稿被 [Awesome Codex Pet](https://github.com/legeling/awesome-codex-pet) 合并并加入其安装清单。本仓库独立的 GitHub 命令无需等待该合并。
+> 若你希望使用 `npx --yes @legeling/codex-pet install nijika--amia` 这个社区目录命令，还需要本项目的[上游投稿](https://github.com/legeling/awesome-codex-pet/pull/251)被合并并加入安装清单。本仓库独立的 GitHub 命令已可使用。
 
 ## 文件
 
