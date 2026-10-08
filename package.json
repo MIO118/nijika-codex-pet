@@ -1,6 +1,6 @@
 {
   "name": "nijika-codex-pet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A non-commercial Nijika Ijichi desktop pet package for ChatGPT/Codex",
   "type": "module",
   "bin": {
