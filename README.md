@@ -1,12 +1,16 @@
 # 虹夏 Codex 桌宠 · Nijika Ijichi Desktop Pet
 
-[![安装自检](https://github.com/MIO118/nijika-codex-pet/actions/workflows/validate.yml/badge.svg)](https://github.com/MIO118/nijika-codex-pet/actions/workflows/validate.yml)
+[![安装自检](https://github.com/amiaverse/nijika-codex-pet/actions/workflows/validate.yml/badge.svg)](https://github.com/amiaverse/nijika-codex-pet/actions/workflows/validate.yml)
 
 ![虹夏待机动画](assets/idle.gif)
 
 > 本产品为 Amiaね 制作的《孤独摇滚！》虹夏桌宠；仅限非商业使用，原角色权利归原权利人。
 
 虹夏（伊地知虹夏 / Nijika Ijichi）Codex 桌宠，是 Amiaね 制作的《孤独摇滚！》（Bocchi the Rock!）同人桌面宠物。提供 npx 命令与 ZIP 离线安装，用于支持 Pets 的 ChatGPT/Codex 桌面版（Codex桌宠 / GPT桌宠）。v2 图集包含 9 种工作状态动画与 16 个视线方向，适用于支持桌面 Pets 的 macOS 和 Windows 版本。安装包保存在电脑本地，换账号后仍可保留文件；在新电脑上需要重新安装。它不会自动创建网页 ChatGPT Work 账号中的宠物。
+
+## v1.0.1 更新
+
+GitHub 账号已更名为 [`amiaverse`](https://github.com/amiaverse)。本版本更新仓库链接、安装文档，并纳入 Node.js 20.0.0 的自检兼容修复与 Windows / Ubuntu 测试配置。虹夏名称、宠物 ID、动画图集与安装器保持不变；已经安装的虹夏无需重新安装。
 
 ## 预览
 
@@ -16,24 +20,24 @@
 
 先安装 [Node.js 20 或更新版本](https://nodejs.org/en/download/)。macOS 打开「终端」，Windows 打开「PowerShell」；输入 `node --version` 和 `npm --version`，确认两条命令都能显示版本号。
 
-**推荐：固定 v1.0.0，只需 Node.js。** 复制下面一整行执行：
+**推荐：固定 v1.0.1，只需 Node.js。** 复制下面一整行执行：
 
 ```bash
-npx --yes --package https://github.com/MIO118/nijika-codex-pet/archive/refs/tags/v1.0.0.tar.gz nijika-codex-pet install nijika--amia
+npx --yes --package https://github.com/amiaverse/nijika-codex-pet/archive/refs/tags/v1.0.1.tar.gz nijika-codex-pet install nijika--amia
 ```
 
-这条命令从 GitHub 的 v1.0.0 标签下载公开安装包，再把虹夏文件放到当前电脑；已在全新临时目录实际验证。
+这条命令从 GitHub 的 v1.0.1 标签下载公开安装包，再把虹夏文件放到当前电脑。安装器已在临时目录验证文件复制与校验。
 
 如果已经安装 Git，也可以使用较短的仓库命令。它读取仓库当前最新版本：
 
 ```bash
-npx --yes --package github:MIO118/nijika-codex-pet nijika-codex-pet install nijika--amia
+npx --yes --package github:amiaverse/nijika-codex-pet nijika-codex-pet install nijika--amia
 ```
 
 ### ZIP 安装（npx 下载失败时）
 
-1. 下载 [v1.0.0 ZIP](https://github.com/MIO118/nijika-codex-pet/archive/refs/tags/v1.0.0.zip)，或打开 [Release 页面](https://github.com/MIO118/nijika-codex-pet/releases/tag/v1.0.0)，在 Assets 中选择 Source code (zip)。
-2. 解压得到 `nijika-codex-pet-1.0.0`，进入能看到 `install.mjs`、`pet.json` 和 `spritesheet.webp` 的那一层。
+1. 下载 [v1.0.1 ZIP](https://github.com/amiaverse/nijika-codex-pet/archive/refs/tags/v1.0.1.zip)，或打开 [Release 页面](https://github.com/amiaverse/nijika-codex-pet/releases/tag/v1.0.1)，在 Assets 中选择 Source code (zip)。
+2. 解压得到 `nijika-codex-pet-1.0.1`，进入能看到 `install.mjs`、`pet.json` 和 `spritesheet.webp` 的那一层。
 3. Windows 在文件夹空白处右键选择「在终端中打开」，执行：
 
 ```powershell
@@ -46,7 +50,7 @@ macOS 打开「终端」，输入 `cd `（末尾有空格），把解压后的�
 node ./install.mjs install nijika--amia
 ```
 
-看到「已安装虹夏到：……」即表示文件安装完成。无需运行 `npm install`。只要已有 Node.js 和完整 ZIP，安装阶段可离线完成。v1.0.0 ZIP 已实际下载、解压并在临时目录验证安装成功；Windows 操作步骤尚未在实机测试。
+看到「已安装虹夏到：……」即表示文件安装完成。无需运行 `npm install`。只要已有 Node.js 和完整 ZIP，安装阶段可离线完成。安装器自检已通过 Windows 与 Ubuntu 的 Node.js 20.0.0 / 24 四组 CI；Windows 桌面应用中的显示与交互仍未在实机测试。
 
 ### 不装 Node.js：手动复制两个文件
 
